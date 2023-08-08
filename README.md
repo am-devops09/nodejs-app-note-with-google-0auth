@@ -1,5 +1,8 @@
 # Notes-NodeJs-CRUD-MongoDB
 
+## to add 0auth 
+https://www.youtube.com/watch?v=v8j2lvjCAZc
+
 ## Udates
 [x] Fixed Mongoose Notes Query Issue 7.0.0
 
