@@ -35,3 +35,7 @@ In VS Code editor you can simply select all occurrences of a word by selecting i
 
 ************************************* using note app with minikube and then port-forward svc note app which i set it as cluster ip to be connected with 0auth google
 kubectl port-forward svc/note-app -n note-ns 5000
+
+
+## it sounds good
+now i will try ingress

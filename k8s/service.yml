@@ -8,7 +8,7 @@ metadata:
 spec:
   selector:
     app: note-app
-  type: ClusterIP
+  type: NodePort
   ports:
     - name: note-app
       port: 5000
