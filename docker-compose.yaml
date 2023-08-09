@@ -1,21 +1,21 @@
-version: '12.12'
+version: '3.8'
 
 services:
   app:
-    image: mveyone/note-app:v1
+    image: mveyone/note-app:13
     # build:
     #   context: .
     #   dockerfile: Dockerfile.dev
     ports:
-      - "12000:12000"
+      - "5000:5000"
     depends_on:
       - db
     environment:
-      # SERVER_PORT: 12000
-      MONGO_URL: mongodb://db:12120121
+      # SERVER_PORT: 13000
+      MONGO_URL: mongodb://db:27017
 
   db:
     image: mongo:latest
     restart: always
     ports:
-      - "12120121:12120121"
+      - "27017:27017"

@@ -17,14 +17,14 @@ spec:
     spec:
       containers:
         - name: go-app
-          image: mveyone/note-app:12
+          image: mveyone/note-app:13
           ports:
             - containerPort: 5000
           env:
             - name: MONGODB_URI
               value: "mongodb://mongo-app-service:27017"
             # - name: SERVER_PORT
-            #   value: "12000"
+            #   value: "13000"
         - name: mongo-app
           image: mongo:latest
           ports:

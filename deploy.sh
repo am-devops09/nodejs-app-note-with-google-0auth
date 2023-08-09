@@ -29,7 +29,7 @@ docker rmi -f $(docker images -q $image_name)
 
 # build new docker image with new tag
 echo "--------------------Build new Image--------------------"
-docker build -t $image_name:$newtag .
+docker build -t $image_name:$newtag -f Dockerfile.dev .
 
 # push the latest build to dockerhub
 echo "--------------------Pushing Docker Image--------------------"
@@ -47,7 +47,7 @@ awk -v search="$tag" -v replace="$newtag" '{gsub(search, replace)}1' "$composefi
 echo "--------------------creating Namespace--------------------"
 kubectl create ns $namespace || true
 
-echo "--------------------Deploy App--------------------"
+echo "--------------------Delete App--------------------"
 kubectl delete -n $namespace -f k8s
 
 # deploy app
