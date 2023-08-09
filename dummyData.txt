@@ -29,3 +29,9 @@ docker volume prune -f
 
 # Remove unused networks.
 docker network prune -f
+
+************************************************** select the same word vsc ****************
+In VS Code editor you can simply select all occurrences of a word by selecting it and using the CTRL + SHIFT + L keyboard shortcut. In this case, a cursor appears after each match and you can edit all of the selected texts at once.
+
+************************************* using note app with minikube and then port-forward svc note app which i set it as cluster ip to be connected with 0auth google
+kubectl port-forward svc/note-app -n note-ns 5000

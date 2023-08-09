@@ -1,0 +1,31 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: note-app
+  namespace: note-ns
+  labels:
+    app: note-app
+spec:
+  selector:
+    app: note-app
+  type: ClusterIP
+  ports:
+    - name: note-app
+      port: 5000
+      targetPort: 5000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mongo-app-service
+  namespace: note-ns
+  labels:
+    app: note-app
+spec:
+  selector:
+    app: note-app
+  ports:
+    - name: mongo-app
+      port: 27017
+      targetPort: 27017
+  type: NodePort
